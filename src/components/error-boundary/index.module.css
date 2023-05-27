@@ -1,0 +1,7 @@
+.Error .Title {
+  @apply text-2xl font-bold;
+}
+
+.Error .Actions {
+  @apply flex gap-4;
+}

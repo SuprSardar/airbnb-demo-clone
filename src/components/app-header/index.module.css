@@ -1,0 +1,40 @@
+.Header {
+  @apply h-[72px] py-4 px-8 border-b border-[#1111111a];
+}
+.Header .Logo {
+  @apply h-8;
+}
+.Header .Nav {
+  @apply flex gap-10 h-[72px];
+}
+.Header .Nav .Link {
+  @apply flex place-items-center h-full py-3 text-[#111111];
+}
+.Header .Nav .Link.Active {
+  @apply relative font-semibold text-black;
+  @apply after:absolute after:bottom-0 after:h-[3px] after:w-full after:bg-[#ff385c];
+}
+.Header .User {
+  @apply h-10 w-10;
+}
+.Header .User .Menu_Button {
+  @apply h-full w-full grid place-items-center;
+}
+.Header .User .Menu_Button svg {
+  @apply hidden;
+}
+
+@media (width < 810px) {
+  .Header {
+    @apply px-4;
+  }
+  .Header .Nav {
+    @apply hidden;
+  }
+  .Header .User .Menu_Button img {
+    @apply hidden;
+  }
+  .Header .User .Menu_Button svg {
+    @apply block;
+  }
+}

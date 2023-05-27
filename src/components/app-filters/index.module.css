@@ -1,0 +1,36 @@
+.Filters {
+  @apply sticky top-0 bg-white h-[72px] py-3 px-8 border-b border-[#1111111a] z-[3];
+}
+.Filters :is(.Views, .Specifications, .More) {
+  @apply flex h-12;
+}
+.Filters .Views {
+  @apply bg-[#f3f3f2] rounded-xl;
+}
+.Filters .Views .View {
+  @apply grid place-items-center h-full aspect-square rounded-lg;
+}
+.Filters .Views .View.Active {
+  @apply bg-black;
+}
+.Filters .Specifications {
+  @apply gap-3;
+}
+.Filters .Specifications .Specification {
+  @apply flex items-center bg-[#f3f3f2] text-[#111111] py-3 px-4 rounded-xl text-start;
+}
+.Filters .More .Filter {
+  @apply grid place-items-center bg-[#f3f3f2] h-full aspect-square rounded-lg;
+}
+
+@media (width < 810px) {
+  .Filters {
+    @apply h-14 px-4;
+  }
+  .Filters :is(.Views, .Specifications, .More) {
+    @apply h-10;
+  }
+  .Filters .Specifications {
+    @apply hidden;
+  }
+}

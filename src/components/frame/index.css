@@ -1,0 +1,18 @@
+.Modal {
+  @apply fixed inset-0 flex justify-center items-center z-40 transition-all delay-500;
+}
+.Modal::before {
+  @apply content-[''] fixed inset-0 bg-transparent transition-all duration-500;
+}
+.Modal.Active {
+  @apply duration-500 delay-500 opacity-100;
+}
+.Modal.Active::before {
+  @apply bg-black/50;
+}
+.Modal > * {
+  @apply transition-all duration-500;
+}
+.Modal.Active > * {
+  @apply translate-y-0 translate-x-0 delay-150 duration-500;
+}

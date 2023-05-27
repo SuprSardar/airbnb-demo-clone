@@ -1,0 +1,15 @@
+.Rooms {
+  @apply relative flex;
+}
+
+@media (width > 809px) {
+  .Rooms > aside:hover ~ main {
+    @apply ml-auto w-[calc(100vw-228px)];
+  }
+}
+
+@media (width < 810px) {
+  .Rooms {
+    @apply flex-col;
+  }
+}

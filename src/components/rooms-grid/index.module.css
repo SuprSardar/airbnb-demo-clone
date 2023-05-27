@@ -1,0 +1,23 @@
+.Grid {
+  @apply p-8 w-[calc(100vw-88px)];
+}
+.Grid .Layout {
+  --cards-per-row: 4;
+  @apply grid gap-6 grid-cols-[repeat(var(--cards-per-row),minmax(200px,1fr))];
+}
+
+@media (width < 1440px) {
+  .Grid .Layout {
+    --cards-per-row: 2;
+  }
+}
+
+@media (width < 810px) {
+  .Grid {
+    @apply px-4 w-full;
+  }
+  .Grid .Layout {
+    --cards-per-row: 1;
+    @apply gap-4;
+  }
+}

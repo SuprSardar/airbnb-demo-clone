@@ -1,0 +1,7 @@
+.Home {
+  @apply flex flex-col;
+}
+
+::-webkit-scrollbar {
+  @apply w-0 hidden;
+}

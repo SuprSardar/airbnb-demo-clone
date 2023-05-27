@@ -1,0 +1,34 @@
+.Filters {
+  @apply fixed inset-0 z-[-1] animate-[remove] duration-[350ms];
+}
+.Filters.Active {
+  @apply animate-none z-[2];
+}
+.Filters.Active .Off_Canvas {
+  @apply translate-x-0;
+}
+.Filters .Off_Canvas {
+  @apply sticky top-[144px] ml-auto bg-white w-[400px] h-[calc(100vh-144px)] border-l border-[#1111111a] overflow-y-auto;
+  @apply translate-x-full shadow-[#0000001f_-8px_0px_40px_0px] transition-transform duration-[350ms] ease-out;
+}
+.Filters .Off_Canvas .Main {
+  @apply p-6 space-y-5;
+}
+.Filters .Off_Canvas .Footer {
+  @apply bg-white sticky bottom-0 w-full border-t border-[#1111111a] p-6;
+}
+
+@keyframes remove {
+  from {
+    @apply z-[2];
+  }
+  to {
+    @apply z-[-1];
+  }
+}
+
+@media (width < 810px) {
+  .Filters .Off_Canvas {
+    @apply w-full;
+  }
+}
