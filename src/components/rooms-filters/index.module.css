@@ -8,14 +8,14 @@
   @apply translate-x-0;
 }
 .Filters .Off_Canvas {
-  @apply sticky top-[144px] ml-auto bg-white w-[400px] h-[calc(100vh-144px)] border-l border-[#1111111a] overflow-y-auto;
-  @apply translate-x-full shadow-[#0000001f_-8px_0px_40px_0px] transition-transform duration-[350ms] ease-out;
+  @apply sticky top-[144px] ml-auto bg-white dark:bg-black w-[400px] h-[calc(100vh-144px)] border-l overflow-y-auto;
+  @apply translate-x-full shadow-[#0000001f_-8px_0px_40px_0px] dark:shadow-[#ffffff1f_-8px_0px_40px_0px] transition-transform duration-[350ms] ease-out;
 }
 .Filters .Off_Canvas .Main {
   @apply p-6 space-y-5;
 }
 .Filters .Off_Canvas .Footer {
-  @apply bg-white sticky bottom-0 w-full border-t border-[#1111111a] p-6;
+  @apply bg-white dark:bg-black sticky bottom-0 w-full border-t p-6;
 }
 
 @keyframes remove {

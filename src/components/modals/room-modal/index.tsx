@@ -39,7 +39,7 @@ const RoomModal = ({ room }: Props) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 h-full grow">
+        <div className="flex flex-col gap-4 h-full grow max-[810px]:hidden">
           <img className="grow h-0" src={room.Image} alt="" />
           <img className="grow h-0" src={room.Image} alt="" />
         </div>
@@ -50,25 +50,27 @@ const RoomModal = ({ room }: Props) => {
           <div className="space-y-8">
             <div className="space-y-3">
               <button className="button border px-3 py-2 flex gap-2 rounded-xl">
-                <img className="h-5 w-5" src={Badge} alt="" />
+                <img className="h-5 w-5 !invert-0" src={Badge} alt="" />
                 <span>Superhost</span>
               </button>
 
-              <div className="flex gap-2">
-                <h2 className="mr-auto text-3xl font-medium">Whitefish Estate</h2>
+              <div className="flex gap-2 max-[1440px]:flex-col-reverse justify-between">
+                <h2 className="text-3xl max-[1440px]:text-2xl font-medium">Whitefish Estate</h2>
 
-                <button className="grid place-items-center h-9 w-9 bg-[#1111110a] rounded-full">
-                  <img className="h-4 w-4" src={Heart} alt="like" />
-                </button>
-                <button className="grid place-items-center h-9 w-9 bg-[#1111110a] rounded-full">
-                  <img className="h-4 w-4" src={Heart} alt="like" />
-                </button>
+                <div className="flex gap-2">
+                  <button className="grid place-items-center h-9 w-9 bg-[#1111110a] dark:bg-[#2b2b2b] rounded-full">
+                    <img className="h-4 w-4" src={Heart} alt="like" />
+                  </button>
+                  <button className="grid place-items-center h-9 w-9 bg-[#1111110a] dark:bg-[#2b2b2b] rounded-full">
+                    <img className="h-4 w-4" src={Heart} alt="like" />
+                  </button>
+                </div>
               </div>
 
               <address className="text-[#717171] not-italic text-base">Whitefish, Montana, United States</address>
             </div>
 
-            <div className="flex gap-10">
+            <div className="flex gap-10 max-[1440px]:flex-col">
               <div className="flex gap-3 items-center">
                 <img className="h-5 w-5" src={Guests} alt="" />
                 <span>16+ guests</span>
@@ -90,7 +92,7 @@ const RoomModal = ({ room }: Props) => {
 
           <hr />
 
-          <div className="flex gap-8">
+          <div className="flex gap-8 max-[1440px]:flex-col">
             <div className="flex-1 space-y-4">
               <img className="h-14 w-14" src={Workspace} alt="" />
 
@@ -148,7 +150,7 @@ const RoomModal = ({ room }: Props) => {
           <div className="space-y-8">
             <h4 className="text-lg font-semibold">What this place offers</h4>
 
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-3 gap-8 max-[1440px]:grid-cols-1">
               <div className="flex gap-3 items-center">
                 <img className="h-5 w-5" src={Guests} alt="" />
                 <span>Kitchen</span>
@@ -288,7 +290,7 @@ const RoomModal = ({ room }: Props) => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 max-[1440px]:grid-cols-1">
                 <div className="border p-6 rounded-3xl space-y-6">
                   <div className="flex items-center gap-4">
                     <img className="h-14 w-14 object-cover rounded-full" src={User_1} alt="" />
@@ -299,7 +301,7 @@ const RoomModal = ({ room }: Props) => {
                     </div>
                   </div>
 
-                  <p className="text-[#111111]">
+                  <p className="text-[#111111] dark:text-[#717171]">
                     Abbe's place was so wonderful and just what I needed. It was the perfect escape with a great wood stove, beautiful
                     views, horses, and nearby skiing. I'm so grateful.
                   </p>
@@ -315,7 +317,7 @@ const RoomModal = ({ room }: Props) => {
                     </div>
                   </div>
 
-                  <p className="text-[#111111]">
+                  <p className="text-[#111111] dark:text-[#717171]">
                     Abbe's place was so wonderful and just what I needed. It was the perfect escape with a great wood stove, beautiful
                     views, horses, and nearby skiing. I'm so grateful.
                   </p>
@@ -331,7 +333,7 @@ const RoomModal = ({ room }: Props) => {
                     </div>
                   </div>
 
-                  <p className="text-[#111111]">
+                  <p className="text-[#111111] dark:text-[#717171]">
                     Abbe's place was so wonderful and just what I needed. It was the perfect escape with a great wood stove, beautiful
                     views, horses, and nearby skiing. I'm so grateful.
                   </p>
@@ -347,7 +349,7 @@ const RoomModal = ({ room }: Props) => {
                     </div>
                   </div>
 
-                  <p className="text-[#111111]">
+                  <p className="text-[#111111] dark:text-[#717171]">
                     Abbe's place was so wonderful and just what I needed. It was the perfect escape with a great wood stove, beautiful
                     views, horses, and nearby skiing. I'm so grateful.
                   </p>
@@ -383,73 +385,75 @@ const RoomModal = ({ room }: Props) => {
         </div>
 
         <div className={S.Finalizer}>
-          <div className="sticky top-0 space-y-4 mt-8">
+          <div className="sticky top-0 space-y-4 mt-8 max-[810px]:mt-0">
             <div className={S.Bill_Card}>
               <div className="space-y-6">
-                <div className="flex gap-2 items-center">
-                  <h2 className="text-2xl font-semibold">$10,000</h2>
+                <div className="space-y-6 max-[810px]:hidden">
+                  <div className="flex gap-2 items-center">
+                    <h2 className="text-2xl font-semibold">$10,000</h2>
 
-                  <span>/ night</span>
+                    <span>/ night</span>
 
-                  <img className="h-4 w-4 ml-auto" src={Star} alt="" />
+                    <img className="h-4 w-4 ml-auto" src={Star} alt="" />
 
-                  <span>5.0</span>
-                </div>
+                    <span>5.0</span>
+                  </div>
 
-                <div className="flex gap-3">
-                  <label className="grow">
-                    <span className="text-xs block mb-2 text-[#717171]">Check In</span>
+                  <div className="flex gap-3">
+                    <label className="grow">
+                      <span className="text-xs block mb-2 text-[#717171]">Check In</span>
 
-                    <button className="flex items-center gap-3 w-full py-3 px-4 bg-white rounded-xl" aria-label="date">
-                      <img className="h-5 w-5" src={Calender} alt="" />
-                      <span className="truncate">6/14/2023</span>
+                      <button className="flex items-center gap-3 w-full py-3 px-4 bg-white dark:bg-black rounded-xl" aria-label="date">
+                        <img className="h-5 w-5" src={Calender} alt="" />
+                        <span className="truncate">6/14/2023</span>
+                      </button>
+                    </label>
+                    <label className="grow">
+                      <span className="text-xs block mb-2 text-[#717171]">Check Out</span>
+
+                      <button className="flex items-center gap-3 w-full py-3 px-4 bg-white dark:bg-black rounded-xl" aria-label="date">
+                        <img className="h-5 w-5" src={Calender} alt="" />
+                        <span className="truncate">6/21/2023</span>
+                      </button>
+                    </label>
+                  </div>
+
+                  <label className="block">
+                    <span className="text-xs block mb-2 text-[#717171]">Guests</span>
+
+                    <button className="flex items-center gap-3 w-full py-3 px-4 bg-white dark:bg-black rounded-xl" aria-label="date">
+                      <span className="truncate">1 guest</span>
+                      <img className="h-5 w-5 ml-auto" src={CarrotDown} alt="" />
                     </button>
                   </label>
-                  <label className="grow">
-                    <span className="text-xs block mb-2 text-[#717171]">Check Out</span>
 
-                    <button className="flex items-center gap-3 w-full py-3 px-4 bg-white rounded-xl" aria-label="date">
-                      <img className="h-5 w-5" src={Calender} alt="" />
-                      <span className="truncate">6/21/2023</span>
-                    </button>
-                  </label>
+                  <hr />
+
+                  <div className="space-y-3">
+                    <div className="flex gap-1 items-center">
+                      <span>6 nights</span>
+                      <img className="h-3 w-3" src={Info} alt="" />
+                      <span className="ml-auto text-[#111111] dark:text-[#717171]">$2,199</span>
+                    </div>
+                    <div className="flex gap-1 items-center">
+                      <span>Cleaning fee</span>
+                      <img className="h-3 w-3" src={Info} alt="" />
+                      <span className="ml-auto text-[#111111] dark:text-[#717171]">$85</span>
+                    </div>
+                    <div className="flex gap-1 items-center">
+                      <span>Airbnb service fee</span>
+                      <img className="h-3 w-3" src={Info} alt="" />
+                      <span className="ml-auto text-[#111111] dark:text-[#717171]">$322</span>
+                    </div>
+                  </div>
+
+                  <hr />
                 </div>
 
-                <label className="block">
-                  <span className="text-xs block mb-2 text-[#717171]">Guests</span>
-
-                  <button className="flex items-center gap-3 w-full py-3 px-4 bg-white rounded-xl" aria-label="date">
-                    <span className="truncate">1 guest</span>
-                    <img className="h-5 w-5 ml-auto" src={CarrotDown} alt="" />
-                  </button>
-                </label>
-
-                <hr />
-
-                <div className="space-y-3">
-                  <div className="flex gap-1 items-center">
-                    <span>6 nights</span>
-                    <img className="h-3 w-3" src={Info} alt="" />
-                    <span className="ml-auto text-[#111111]">$2,199</span>
-                  </div>
-                  <div className="flex gap-1 items-center">
-                    <span>Cleaning fee</span>
-                    <img className="h-3 w-3" src={Info} alt="" />
-                    <span className="ml-auto text-[#111111]">$85</span>
-                  </div>
-                  <div className="flex gap-1 items-center">
-                    <span>Airbnb service fee</span>
-                    <img className="h-3 w-3" src={Info} alt="" />
-                    <span className="ml-auto text-[#111111]">$322</span>
-                  </div>
-                </div>
-
-                <hr />
-
-                <div className="space-y-1">
+                <div className="space-y-1 max-[810px]:!mt-0">
                   <div className="flex">
                     <h5 className="text-base font-semibold">Total</h5>
-                    <span className="ml-auto text-[#111111]">$2,606</span>
+                    <span className="ml-auto text-[#111111] dark:text-[#717171]">$2,606</span>
                   </div>
                 </div>
 

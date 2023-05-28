@@ -12,7 +12,7 @@
   @apply flex flex-col gap-1;
 }
 .Room .Info .Top .Title {
-  @apply text-lg text-[#111111] font-medium;
+  @apply text-lg text-[#111111] dark:text-white font-medium;
 }
 .Room .Info .Top .Address {
   @apply text-[#717171] not-italic;
@@ -30,5 +30,5 @@
   @apply absolute top-3 right-3;
 }
 .Room .Overlay .Like {
-  @apply grid place-items-center h-9 w-9 bg-white rounded-full;
+  @apply grid place-items-center h-9 w-9 bg-white dark:bg-black rounded-full;
 }

@@ -34,6 +34,9 @@
   img {
     @apply h-full w-full object-contain;
   }
+  img:is(.h-5.w-5, .h-4.w-4, .h-3.w-3) {
+    @apply dark:invert;
+  }
 
   :is(select, .select) {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
@@ -55,7 +58,8 @@
     @apply border-0;
   }
 
-  .App {
+  #root,
+  #frame {
     @apply dark:bg-black dark:text-white transition-colors duration-200;
   }
 }

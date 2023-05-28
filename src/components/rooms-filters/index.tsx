@@ -100,7 +100,9 @@ const RoomsFilters = () => {
                 <span className="block text-[#717171]">Bedrooms</span>
 
                 <div className="flex gap-2">
-                  <div className="flex-1 bg-black text-white py-2 px-3 text-center border rounded-full cursor-pointer">Any</div>
+                  <div className="flex-1 bg-black dark:bg-white text-white dark:text-black py-2 px-3 text-center border rounded-full cursor-pointer">
+                    Any
+                  </div>
                   <div className="flex-1 py-2 px-3 text-center border rounded-full cursor-pointer">1</div>
                   <div className="flex-1 py-2 px-3 text-center border rounded-full cursor-pointer">2</div>
                   <div className="flex-1 py-2 px-3 text-center border rounded-full cursor-pointer">3</div>
@@ -113,7 +115,9 @@ const RoomsFilters = () => {
                 <span className="block text-[#717171]">Beds</span>
 
                 <div className="flex gap-2">
-                  <div className="flex-1 bg-black text-white py-2 px-3 text-center border rounded-full cursor-pointer">Any</div>
+                  <div className="flex-1 bg-black dark:bg-white text-white dark:text-black py-2 px-3 text-center border rounded-full cursor-pointer">
+                    Any
+                  </div>
                   <div className="flex-1 py-2 px-3 text-center border rounded-full cursor-pointer">1</div>
                   <div className="flex-1 py-2 px-3 text-center border rounded-full cursor-pointer">2</div>
                   <div className="flex-1 py-2 px-3 text-center border rounded-full cursor-pointer">3</div>
@@ -126,7 +130,9 @@ const RoomsFilters = () => {
                 <span className="block text-[#717171]">Bathrooms</span>
 
                 <div className="flex gap-2">
-                  <div className="flex-1 bg-black text-white py-2 px-3 text-center border rounded-full cursor-pointer">Any</div>
+                  <div className="flex-1 bg-black dark:bg-white text-white dark:text-black py-2 px-3 text-center border rounded-full cursor-pointer">
+                    Any
+                  </div>
                   <div className="flex-1 py-2 px-3 text-center border rounded-full cursor-pointer">1</div>
                   <div className="flex-1 py-2 px-3 text-center border rounded-full cursor-pointer">2</div>
                   <div className="flex-1 py-2 px-3 text-center border rounded-full cursor-pointer">3</div>

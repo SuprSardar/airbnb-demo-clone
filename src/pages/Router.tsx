@@ -26,7 +26,7 @@ const PagesRouter = () => {
 const Fallback = () => (
   <div className="h-screen w-screen grid place-items-center">
     <div className="h-12 w-12 animate-bounce fill-[#121212]">
-      <img src={Logo} alt="logo-small" />
+      <img className="dark:invert" src={Logo} alt="logo-small" />
     </div>
   </div>
 );

@@ -38,13 +38,13 @@ const AppFilters = () => {
           </button>
 
           <div className={CN(S.Specification, "gap-4 !px-2")} aria-label="guest">
-            <button className="grid place-items-center bg-white h-8 w-8 rounded-lg" aria-label="minus">
+            <button className="grid place-items-center bg-white dark:bg-black h-8 w-8 rounded-lg" aria-label="minus">
               <img className="h-4 w-4" src={Minus} alt="carrot-down" />
             </button>
 
             <span className="truncate">4 guests</span>
 
-            <button className="grid place-items-center bg-white h-8 w-8 rounded-lg" aria-label="plus">
+            <button className="grid place-items-center bg-white dark:bg-black h-8 w-8 rounded-lg" aria-label="plus">
               <img className="h-4 w-4" src={Plus} alt="carrot-down" />
             </button>
           </div>

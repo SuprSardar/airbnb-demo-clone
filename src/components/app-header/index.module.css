@@ -1,5 +1,5 @@
 .Header {
-  @apply h-[72px] py-4 px-8 border-b border-[#1111111a];
+  @apply h-[72px] py-4 px-8 border-b;
 }
 .Header .Logo {
   @apply h-8;
@@ -8,10 +8,10 @@
   @apply flex gap-10 h-[72px];
 }
 .Header .Nav .Link {
-  @apply flex place-items-center h-full py-3 text-[#111111];
+  @apply flex place-items-center h-full py-3 text-[#111111] dark:text-[#d1d1d1];
 }
 .Header .Nav .Link.Active {
-  @apply relative font-semibold text-black;
+  @apply relative font-semibold text-black dark:text-white;
   @apply after:absolute after:bottom-0 after:h-[3px] after:w-full after:bg-[#ff385c];
 }
 .Header .User {

@@ -1,11 +1,11 @@
 .Aside {
-  @apply shrink-0 min-h-[calc(100vh-144px)] border-r border-[#1111111a] z-[1];
+  @apply shrink-0 min-h-[calc(100vh-144px)] border-r z-[1];
 }
 .Aside .Links {
   @apply flex flex-col gap-2 w-[87px] hover:w-[227px] py-4 transition-[width] duration-[350ms] ease-out;
 }
 .Aside .Links .Link {
-  @apply flex items-center gap-3 h-12 w-full py-2 px-8 font-medium hover:bg-[#f5f5f5];
+  @apply flex items-center gap-3 h-12 w-full py-2 px-8 font-medium hover:bg-[#f5f5f5] dark:hover:bg-[#2b2b2b];
 }
 .Aside .Links .Link.Active {
   @apply relative;
@@ -14,7 +14,7 @@
 
 @media (width < 810px) {
   .Aside {
-    @apply sticky top-14 bg-white h-fit min-h-fit w-full border-0 border-b;
+    @apply sticky top-14 bg-white dark:bg-black h-fit min-h-fit w-full border-0 border-b;
   }
   .Aside .Links {
     @apply flex-row gap-0 py-0 !w-full overflow-x-auto;

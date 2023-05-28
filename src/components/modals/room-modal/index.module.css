@@ -1,6 +1,6 @@
 .Modal {
-  @apply fixed right-0 h-screen w-3/4 bg-white p-8 space-y-6 overflow-y-auto;
-  @apply translate-x-full translate-y-0 duration-300 ease-in-out;
+  @apply fixed right-0 h-screen w-3/4 bg-white dark:bg-black p-8 space-y-6 overflow-y-auto;
+  @apply translate-x-full translate-y-0 duration-300 ease-in-out transition-transform;
 }
 .Modal .Gallery {
   @apply relative flex gap-4 h-[480px];
@@ -21,8 +21,41 @@
   @apply shrink-0 w-[360px];
 }
 .Modal .Main .Finalizer .Bill_Card {
-  @apply bg-[#f5f5f4] p-6 border rounded-3xl;
+  @apply bg-[#f5f5f4] dark:bg-[#2b2b2b] p-6 border rounded-3xl;
 }
 .Modal .Main .Finalizer .Info_Card {
   @apply bg-[#d43b510a] p-6 border rounded-3xl;
+}
+
+@media (width < 1440px) {
+  .Modal {
+    @apply w-[90%];
+  }
+  .Modal .Main :is(.Details, .Finalizer) {
+    @apply flex-1;
+  }
+}
+
+@media (width < 810px) {
+  .Modal {
+    @apply w-full h-[calc(100vh-72px)] mt-[72px] p-4;
+  }
+  .Modal .Gallery {
+    @apply h-[360px];
+  }
+  .Modal .Gallery .MainImage {
+    @apply !w-full;
+  }
+  .Modal .Main {
+    @apply flex-col-reverse;
+  }
+  .Modal .Main .Finalizer {
+    @apply w-full;
+  }
+  .Modal .Main .Finalizer .Bill_Card {
+    @apply p-4;
+  }
+  .Modal .Main .Finalizer .Info_Card {
+    @apply hidden;
+  }
 }
